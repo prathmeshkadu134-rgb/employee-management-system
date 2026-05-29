@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <div class="card p-s shadow-sm border-0 bg-light">
+            <h1 class="text-success fw-bold">Welcome , {{user?.firstName}}{{" "}}{{user?.lastName}}</h1>
+            <p class="text-muted">Successfully Logged In</p>
+            <hr class="my-4">
+            <div class="text-center mx-auto" style="max-width: 500px;">
+                <p><Strong>Email :</Strong>{{user?.email}}</p>
+                <p><Strong>Contact :</Strong>{{user?.contact}}</p>
+                <p><Strong>Date of Birth :</Strong>{{user?.dob}}</p>
+                <p><Strong>Address :</Strong>{{user?.address}}</p>
+            </div>
+            <button class="btn btn-danger mt-3 px-4" (click)="logout()">Logout</button>
+        </div>
+        
+    </div>
+</body>
+</html>

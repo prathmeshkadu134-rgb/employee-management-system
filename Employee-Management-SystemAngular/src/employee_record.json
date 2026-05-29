@@ -1,0 +1,169 @@
+[ {
+  "id" : 3,
+  "firstName" : "Kartik",
+  "lastName" : "Kumar",
+  "contact" : "9756441136",
+  "email" : "kk@gmail.com",
+  "dob" : [ 2026, 5, 21 ],
+  "address" : "Pune"
+}, {
+  "id" : 5,
+  "firstName" : "Karan",
+  "lastName" : "Singh",
+  "contact" : "9358411638",
+  "email" : "karan@gmail.com",
+  "dob" : [ 2026, 5, 23 ],
+  "address" : "Chandigarh"
+}, {
+  "id" : 6,
+  "firstName" : "Anish",
+  "lastName" : "Patil",
+  "contact" : "9676123642",
+  "email" : "anish@gmail.com",
+  "dob" : [ 2026, 5, 26 ],
+  "address" : "Kashmir"
+}, {
+  "id" : 7,
+  "firstName" : "Ajay",
+  "lastName" : "Patil",
+  "contact" : "9867289379",
+  "email" : "ajay@gmail.com",
+  "dob" : [ 2026, 5, 16 ],
+  "address" : "Dombivali"
+}, {
+  "id" : 8,
+  "firstName" : "Ram",
+  "lastName" : "Jadhav",
+  "contact" : "7361258934",
+  "email" : "ram@gmail.com",
+  "dob" : [ 2026, 6, 6 ],
+  "address" : "UP"
+}, {
+  "id" : 9,
+  "firstName" : "Niraj",
+  "lastName" : "Manuja",
+  "contact" : "7695836117",
+  "email" : "niraj@gmail.com",
+  "dob" : [ 2026, 5, 27 ],
+  "address" : "Kalyan"
+}, {
+  "id" : 12,
+  "firstName" : "Rajesh",
+  "lastName" : "Moree",
+  "contact" : "7695123916",
+  "email" : "rajesh@more.com",
+  "dob" : [ 2026, 5, 22 ],
+  "address" : "Mumbai"
+}, {
+  "id" : 13,
+  "firstName" : "Priti",
+  "lastName" : "Kapur",
+  "contact" : "8654965123",
+  "email" : "priti@gmail.com",
+  "dob" : [ 2026, 5, 29 ],
+  "address" : "Haryana"
+}, {
+  "id" : 17,
+  "firstName" : "Madan",
+  "lastName" : "Mehta",
+  "contact" : "7623986514",
+  "email" : "madan@gmail.com",
+  "dob" : [ 2026, 5, 6 ],
+  "address" : "Rajkot"
+}, {
+  "id" : 18,
+  "firstName" : "Vanita",
+  "lastName" : "Kharat",
+  "contact" : "8639712395",
+  "email" : "vanita@gmail.com",
+  "dob" : [ 2026, 5, 21 ],
+  "address" : "Nagpur"
+}, {
+  "id" : 19,
+  "firstName" : "Mahesh",
+  "lastName" : "Chaudhari",
+  "contact" : "7631896328",
+  "email" : "mahesh@mail.com",
+  "dob" : [ 2026, 5, 29 ],
+  "address" : "Pune"
+}, {
+  "id" : 20,
+  "firstName" : "Kiran",
+  "lastName" : "Jiheb",
+  "contact" : "8462185966",
+  "email" : "kiran@gmial.com",
+  "dob" : [ 2026, 5, 22 ],
+  "address" : "Rajastan"
+}, {
+  "id" : 21,
+  "firstName" : "Rita",
+  "lastName" : "Sharma",
+  "contact" : "8621365214",
+  "email" : "rita@gmail.com",
+  "dob" : [ 2026, 5, 15 ],
+  "address" : "Solapur"
+}, {
+  "id" : 22,
+  "firstName" : "Kundan",
+  "lastName" : "Jagtap",
+  "contact" : "8634972169",
+  "email" : "kundan@gmail.com",
+  "dob" : [ 2026, 5, 30 ],
+  "address" : "Kochi"
+}, {
+  "id" : 23,
+  "firstName" : "Jim",
+  "lastName" : "Maccoy",
+  "contact" : "8695372986",
+  "email" : "jim@gmail.com",
+  "dob" : [ 2026, 5, 23 ],
+  "address" : "Bengal"
+}, {
+  "id" : 24,
+  "firstName" : "Manav",
+  "lastName" : "Khanna",
+  "contact" : "8623597126",
+  "email" : "manav@gmail.com",
+  "dob" : [ 2026, 5, 5 ],
+  "address" : "Kullu"
+}, {
+  "id" : 25,
+  "firstName" : "Keval",
+  "lastName" : "Shinde",
+  "contact" : "9357698126",
+  "email" : "keval@gmail.com",
+  "dob" : [ 2026, 5, 8 ],
+  "address" : "Latur"
+}, {
+  "id" : 26,
+  "firstName" : "Deepak",
+  "lastName" : "Naidu",
+  "contact" : "8697236415",
+  "email" : "deepak@gmail.com",
+  "dob" : [ 2026, 5, 30 ],
+  "address" : "TamilNadu"
+}, {
+  "id" : 27,
+  "firstName" : "Firoz",
+  "lastName" : "Sheikh",
+  "contact" : "9674523698",
+  "email" : "firoz@gmail.com",
+  "dob" : [ 2014, 7, 24 ],
+  "address" : "Kochi"
+}, {
+  "id" : 28,
+  "firstName" : "Amruta",
+  "lastName" : "Khulch",
+  "contact" : "7698326145",
+  "email" : "amruta@gmail.com",
+  "dob" : [ 2014, 1, 4 ],
+  "address" : "Delhi"
+}, {
+  "id" : 29,
+  "firstName" : "Mahir",
+  "lastName" : "YKadu",
+  "contact" : "7693286145",
+  "email" : "mahir@gmail.com",
+  "dob" : [ 2025, 2, 22 ],
+  "address" : "Ulhasnagar"
+} ]

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+  <div class="row">
+    
+    <div class="col-md-5">
+      <h2 class="text-success fw-bold">Employee Form</h2>
+      <hr>
+      
+      <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+        
+        <div class="row mb-3">
+          <div class="col-6">
+            <label class="form-label mb-1">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" />
+            @if(empForm.get('firstName')?.touched && empForm.get('firstName')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('firstName')?.errors?.['required']){
+                  <span>FirstName is Required</span>
+                }
+                @if(empForm.get('firstName')?.errors?.['minlength']){
+                  <span>Minimum 3 characters expected</span>
+                }
+                @if(empForm.get('firstName')?.errors?.['invalidNameFormat']){
+                    <span>Must start with capital letter and contain alphabets only</span>
+                }
+              </div>
+            }
+          </div>
+          
+          <div class="col-6">
+            <label class="form-label mb-1">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" />
+            @if(empForm.get('lastName')?.touched && empForm.get('lastName')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('lastName')?.errors?.['required']){
+                  <span>LastName is required</span>
+                }
+                @if(empForm.get('lastName')?.errors?.['minlength']){
+                  <span>Minimum 5 characters expected</span>
+                }
+                 @if(empForm.get('lastName')?.errors?.['invalidNameFormat']){
+                    <span>Must start with capital letter and contain alphabets only</span>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-6">
+            <label class="form-label mb-1">Contact No.</label>
+            <input type="number" class="form-control" formControlName="contact" />
+            @if(empForm.get('contact')?.touched && empForm.get('contact')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('contact')?.errors?.['required']){
+                  <span>Mobile number is required</span>
+                }
+                @if(empForm.get('contact')?.errors?.['pattern']){
+                  <span>Number must contain 10 digits and starts from 6</span>
+                }
+              </div>
+            }
+          </div>
+          
+          <div class="col-6">
+            <label class="form-label mb-1">Email</label>
+            <input type="email" class="form-control" formControlName="email" />
+            @if(empForm.get('email')?.touched && empForm.get('email')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('email')?.errors?.['required']){
+                  <span>Email is required</span>
+                }
+                @if(empForm.get('email')?.errors?.['email']){
+                  <span>Fill valid email</span>
+                }
+                
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-6">
+            <label class="form-label mb-1">DOB</label>
+            <input type="date" class="form-control" formControlName="dob" />
+            @if(empForm.get('dob')?.touched && empForm.get('dob')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('dob')?.errors?.['required']){
+                  <span>Date is required</span>
+                }
+              </div>
+            }
+          </div>
+          
+          <div class="col-6">
+            <label class="form-label mb-1">Address</label>
+            <input type="text" class="form-control" formControlName="address" />
+            @if(empForm.get('address')?.touched && empForm.get('address')?.invalid){
+              <div class="text-danger small mt-1">
+                @if(empForm.get('address')?.errors?.['required']){
+                <span>Address is required</span>
+                }
+                @if(empForm.get('address')?.errors?.['invalidNameFormat']){
+                  <span>Address should start with capital letter</span>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-success w-100 py-2 fw-semibold" [disabled]="empForm.invalid">
+              Submit
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="col-md-7 ps-md-5">
+      <h2 class="text-success fw-bold">Employee Records</h2>
+      <hr>
+      
+      @if(isTableVisible && emp.length > 0){
+        <div class="table-responsive">
+          <table class="table table-striped align-middle">
+            <thead>
+              <tr >
+                <th >Full Name</th>
+                <th >Contact No</th>
+                <th >Email</th>
+                <th >DOB</th>
+                <th >Address</th>
+                <th >Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for(e of emp; track e.id){
+                <tr>
+                  <td >{{e.firstName + ' ' + e.lastName }}</td>
+                  <td >{{e.contact}}</td>
+                  <td >{{e.email}}</td>
+                  <td >{{e.dob}}</td>
+                  <td >{{e.address}}</td>
+                  <td>
+                    <div class="d-flex gap-2">
+                      <button type="button" class="btn btn-primary btn-sm" (click)="onEdit(e)" title="Edit">
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(e.id)" title="Delete">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+          <span class="text-muted small">
+            Showing Page <strong>{{currentPage + 1}}</strong> of <strong>{{totalPages}}</strong>
+            (Total Records:{{totalItems}})
+          </span>
+          <nav aria-label="Employee table page navigation control utility button tray">
+            <ul class="pagination pagination-sm mb-0">
+              <li class="page-item" [class.disabled]="currentPage === 0">
+                <button class="page-link" (click)="onPageChange(currentPage - 1)">Previous</button>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages - 1">
+                <button class="page-link" (click)="onPageChange(currentPage + 1)">Next  </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      } @else {
+        <div class="alert alert-info text-center">
+          No employee records found.
+        </div>
+      }
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
